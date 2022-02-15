@@ -1,0 +1,134 @@
+/* css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#banner {
+    width: 1200px;
+    height: 450px;
+    margin: 0 auto;
+    display: flex;
+    background-image: url(images/bg2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#banner .img-box > img {
+    width: 35%;
+    position: absolute;
+    right: 20px;
+    top: -190px;
+    animation-name: character;
+    animation-fill-mode: forwards;
+    animation-duration: 0.75s;
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+    opacity: 0;
+}
+
+@keyframes character {
+    0% {
+        opacity: 0;
+        transform: translate(-2000px, -700px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    animation-name: title;
+    animation-duration: 0.75s;
+    animation-delay: 1.25s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+/* title 애니메이션 */
+@keyframes title {
+    0% {
+        opacity: 0;
+        transform: translateY(-500px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* logo */
+.title .text-box > img {
+    width: 187px;
+    height: 36px;
+    margin-bottom: 3px;
+}
+
+/* text-box */
+.title .text-box > h1 {
+    width: 328px;
+    height: 209px;
+    color: #fff;
+    font-size: 236px;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* button */
+.title .btn {
+    width: 147px;
+    height: 35px;
+    margin-top: 25px;
+    background: #0063e5;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.title .btn:hover {
+    animation-name: button;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.title .btn > a {
+    font-size: 18px;
+}
+
+.title .btn > a > span {
+    margin-left: 15px;
+    font-size: 18px;
+}
+
+/* button 애니메이션 */
+@keyframes button {
+    0% {
+       margin-left: 40px;
+    }
+    100% {}
+}
